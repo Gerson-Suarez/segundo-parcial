@@ -1,5 +1,5 @@
 ---
-title: "Untitled"
+title: "Gerson David Suarez Patiño 1950169"
 output: github_document
 ---
 
@@ -7,24 +7,29 @@ output: github_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## GitHub Documents
+## datos operativos de una planta de oxidacion de amoniaco a acido nitrico
 
-This is an R Markdown format used for publishing markdown documents to GitHub. When you click the **Knit** button all R code chunks are run and a markdown file (.md) suitable for publishing to GitHub is generated.
+este trabajo nos mostrara los operativos de una planta de oxidacion de amoniaco pasando a acido nitrico **stacklooss** 
 
-## Including Code
+procedemos a crear un dataframe sobre  la planta de oxidacion de amoniaco
 
-You can include R code in the document as follows:
 
-```{r cars}
-summary(cars)
-```
 
-## Including Plots
+```{r}
+data(stackloss)
+stackloss
 
-You can also embed plots, for example:
+ summary(stackloss)
+ 
+ library(tidyverse)
+ mutate(stackloss,porcentaje_de_acido=((Acid.Conc./10)+50))
+ 
+ ## temperatura del agua y la tasa de funcionamiento de la planta(relacion)
+ 
+ mutate(stackloss,Relacion.T.F= Air.Flow/Water.Temp)
+ 
+ ## Promedios encontrados en las relaciones
+ 
+ 
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
