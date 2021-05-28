@@ -120,5 +120,26 @@ stackloss
     ## 21       70         20         91         15     3.500000
 
 ``` r
- ## Promedios encontrados en las relaciones
+ #filtracion de los datos con respecto a la temperatura
+ 
+ filter(stackloss,Water.Temp==19)
+```
+
+    ##   Air.Flow Water.Temp Acid.Conc. stack.loss
+    ## 1       58         19         93         12
+    ## 2       50         19         72          8
+    ## 3       50         19         79          8
+
+``` r
+ filter(stackloss,Water.Temp==23)
+```
+
+    ##   Air.Flow Water.Temp Acid.Conc. stack.loss
+    ## 1       62         23         87         18
+    ## 2       58         23         87         15
+
+``` r
+ #desviacion
+ 
+ temp23 <- filter(stackloss,Water.Temp==23)
 ```

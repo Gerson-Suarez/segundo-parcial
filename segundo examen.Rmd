@@ -28,8 +28,18 @@ stackloss
  
  mutate(stackloss,Relacion.T.F= Air.Flow/Water.Temp)
  
- ## Promedios encontrados en las relaciones
  
+ 
+ 
+ #filtracion de los datos con respecto a la temperatura
+ 
+ filter(stackloss,Water.Temp==19)
+ 
+ filter(stackloss,Water.Temp==23)
+ 
+ #desviacion
+ 
+ temp23 <- filter(stackloss,Water.Temp==23)
  
 
 
